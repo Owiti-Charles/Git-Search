@@ -1,1 +1,6 @@
-<p>search-form works!</p>
+<div class="container">
+  <form class="form-inline">
+    <input type="text" class="form-control" placeholder="Search here...." name="searchName" [(ngModel)]="searchName">
+    <button class="btn btn-info " (click) = "search()">Search!</button>
+  </form>
+</div>

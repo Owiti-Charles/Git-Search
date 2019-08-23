@@ -9,7 +9,11 @@ export class ReopsitoriesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  repoSearch(searchName){
+    console.log(searchName);
   }
 
+  ngOnInit() {
+  }
+ 
 }
