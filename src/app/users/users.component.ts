@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserserviceService} from '../userservice.service';
+import {User} from '../user';
 
 @Component({
   selector: 'app-users',
@@ -6,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+user: User[];
+  constructor(public myService: UserserviceService) {
   }
 
-  searchs(searchName){
-    console.log(searchName);
+  ngOnInit() {
+    this.myService.searchUSer("");
+  }
+
+  searchs(searchName) {
+    this.user = this.myService.foundUser;
   }
 }
