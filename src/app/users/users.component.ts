@@ -23,21 +23,11 @@ repo: Repos;
         console.log(error)
       }
     );
-    this.myService.getReopos(searchName).then(
-      (results)=>{
-        this.repo =this.myService.allRepos
-        console.log(this.repo);
-      },
-      (error)=>{
-        console.log(error);
-      }
-    );
+
   }
 
   ngOnInit() {
     this.searchs('Owiti-Charles');
     // this.myService.getReopos("Owiti-Charles");
   }
-
-
 }

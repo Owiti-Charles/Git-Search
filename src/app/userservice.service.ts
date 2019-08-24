@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class UserserviceService {
   foundUser: User;
-  public   allRepos:any;
+  allRepos: Repos;
   up_key = '2248a8bd35eb376f0b586b764c50c76b67be3a1b';
 
   constructor(private http: HttpClient) {
@@ -55,11 +55,6 @@ export class UserserviceService {
       this.http.get<Repos>('https://api.github.com/users/'+searchName+"/repos?order=created&sort=asc?access_token="+this.up_key).toPromise().then(
         (results) => {
           this.allRepos = results;
-          // console.log(this.allRepos);
-            // for(let i =0; i< this.allRepos.length; i++){
-            //   console.log(this.allRepos[i]);
-            // }
-
           resolve();
         },
         (error) => {
