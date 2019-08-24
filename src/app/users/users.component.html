@@ -1,14 +1,28 @@
 <div class="container-fluid">
-  <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
+  <div class="overlay">
+      <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
 
-  <div class="container">
-    <p>User Name: {{user.login}}</p>
-    <p>link: {{user.html_url}}</p>
-    <p>joined: {{user.created_at | date}}</p>
-    <p>followers: {{user.followers}}</p>
-    <p>following: {{user.following}}</p>
-    <p> Bio: {{user.bio}}</p>
-    <p>Repositories {{user.public_repos}}</p>
-    <img src="{{user.avatar_url}}" alt="">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <div></div>
+        </div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-1"></div>
+      </div>
+      
+      
+      
+      
+      <div class="container">
+        <p>User Name: {{user.login}}</p>
+        <p>link: {{user.html_url}}</p>
+        <p>joined: {{user.created_at | date}}</p>
+        <p>followers: {{user.followers}}</p>
+        <p>following: {{user.following}}</p>
+        <p> Bio: {{user.bio}}</p>
+        <p>Repositories {{user.public_repos}}</p>
+        <img src="{{user.avatar_url}}" alt="">
+      </div>
   </div>
 </div>
