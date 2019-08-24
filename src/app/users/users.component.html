@@ -1,28 +1,36 @@
 <div class="container-fluid">
   <div class="overlay">
       <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
-
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-4">
-          <div></div>
-        </div>
-        <div class="col-sm-6"></div>
-        <div class="col-sm-1"></div>
-      </div>
-      
-      
-      
-      
-      <div class="container">
-        <p>User Name: {{user.login}}</p>
-        <p>link: {{user.html_url}}</p>
-        <p>joined: {{user.created_at | date}}</p>
-        <p>followers: {{user.followers}}</p>
-        <p>following: {{user.following}}</p>
-        <p> Bio: {{user.bio}}</p>
-        <p>Repositories {{user.public_repos}}</p>
-        <img src="{{user.avatar_url}}" alt="">
+      <div class="container content">
+          <div class="row">
+              <div class="col-sm-4" id="imgcard">
+                <div class="userimage card">
+                  <div class="card-img">
+                    <img src="{{user.avatar_url}}" alt="">
+                  </div> 
+                </div>
+              </div>
+              <div class="col-sm-7 user">
+                <div class="card">
+                  <div class="card-body">
+                    <h4>Git-Search: {{user.login}}</h4>
+                    <hr>
+                    <p><i class="fa fa-info" style="font-size:18px"></i> Bio: {{user.bio}}</p>
+                    <hr>
+                    <p><i class="fa fa-file-o" style="font-size:18px"></i>Repositories {{user.public_repos}}</p>
+                    <hr>
+                    <p> <i class="fa fa-users"></i>followers: {{user.followers}}</p>
+                    <hr>
+                    <p> <i class="fa fa-user" aria-hidden="true"></i> following: {{user.following}}</p>
+                    <hr>
+                    <p><i class="fa fa-clock-o" style="font-size:18px"></i> joined: {{user.created_at | date}}</p>
+                  </div>
+                  <div class="card-footer">
+                    {{user.html_url}}
+                  </div>
+                </div>  
+              </div>
+            </div> 
       </div>
   </div>
 </div>
