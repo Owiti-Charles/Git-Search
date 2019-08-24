@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserserviceService} from '../userservice.service';
 import {User} from '../user';
+import { Repos } from '../repos';
 
 @Component({
   selector: 'app-users',
@@ -9,6 +10,7 @@ import {User} from '../user';
 })
 export class UsersComponent implements OnInit {
 user: User;
+repo: Repos;
   constructor(public myService: UserserviceService) {
   }
 
@@ -20,11 +22,16 @@ user: User;
       (error)=>{
         console.log(error)
       }
-    ) 
+    );
+    this.myService.getReopos(searchName).then(
+      this.repo =this.myService.allRepos
+    );
+
   }
 
   ngOnInit() {
     this.searchs('Owiti-Charles');
+    // this.myService.getReopos("Owiti-Charles");
 
   }
 

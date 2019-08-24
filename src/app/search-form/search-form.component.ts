@@ -15,6 +15,7 @@ export class SearchFormComponent implements OnInit {
   search(){
     console.log(this.searchName)
     this.searchOutput.emit(this.searchName);
+    this.searchName = "";
   }
 
 }
