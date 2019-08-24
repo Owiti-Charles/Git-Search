@@ -24,15 +24,19 @@ repo: Repos;
       }
     );
     this.myService.getReopos(searchName).then(
-      this.repo =this.myService.allRepos
+      (results)=>{
+        this.repo =this.myService.allRepos
+        console.log(this.repo);
+      },
+      (error)=>{
+        console.log(error);
+      }
     );
-
   }
 
   ngOnInit() {
     this.searchs('Owiti-Charles');
     // this.myService.getReopos("Owiti-Charles");
-
   }
 
 
