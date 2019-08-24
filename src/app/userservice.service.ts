@@ -6,24 +6,31 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserserviceService {
-  foundUser: User[] = [];
+  foundUser: User;
+  up_key = '2248a8bd35eb376f0b586b764c50c76b67be3a1b';
 
   constructor(private http: HttpClient) {
+    this.foundUser = new User("","","","",0,0,0,"")
   }
 
   searchUSer(searchName: string) {
-    // tslint:disable-next-line:class-name
-    interface data {
+   
+    interface Responce {
+      url:string,
       login: string;
+      html_url:string;
+      location:string
+      public_repos:number;
+      followers:number;
+      following:number;
+      avatar_url:string
     }
 
-    const promise = new Promise((resolve, reject) => {
-      // tslint:disable-next-line:max-line-length
-      this.http.get<data>('https://api.github.com/users/MungaiKeren?access_token=3cbbddb991c02e7d5a2f0fd4224f9267a5153e5f').toPromise().then(
+    return new Promise((resolve, reject) => {
+      this.http.get<Responce>('https://api.github.com/users/'+searchName+'?access_token='+this.up_key).toPromise().then(
         (result) => {
-         
-          // this.foundUser.push(result);
-          console.log(result);
+          this.foundUser = result;
+          console.log(this.foundUser);
           resolve();
         },
         (error) => {
@@ -32,7 +39,6 @@ export class UserserviceService {
         }
       );
     });
-    return promise;
   }
 }
 

@@ -8,15 +8,25 @@ import {User} from '../user';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-user: User[];
+user: User;
   constructor(public myService: UserserviceService) {
   }
 
-  ngOnInit() {
-    this.myService.searchUSer("");
+  searchs(searchName) {
+    this.myService.searchUSer(searchName).then(
+      (success)=>{
+        this.user = this.myService.foundUser;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    ) 
   }
 
-  searchs(searchName) {
-    this.user = this.myService.foundUser;
+  ngOnInit() {
+    this.searchs('Owiti-Charles');
+
   }
+
+
 }

@@ -1,3 +1,8 @@
 <div class="container-fluid">
   <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
+
+  <div class="container">
+    <p>User Name: {{user.login}}</p>
+    <img src="{{user.avatar_url}}" alt="">
+  </div>
 </div>
