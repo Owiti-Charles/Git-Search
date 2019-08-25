@@ -11,6 +11,7 @@ import { ReopsitoriesComponent } from './reopsitories/reopsitories.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserserviceService } from './userservice.service';
 import { HighlightDirective } from './highlight.directive';
+import { DatePipePipe } from './date-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HighlightDirective } from './highlight.directive';
     ReopsitoriesComponent,
     NotfoundComponent,
     HighlightDirective,
+    DatePipePipe,
     
   ],
   imports: [

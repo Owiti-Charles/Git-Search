@@ -50,7 +50,10 @@
               <div class="card-subtitle mb-2">
                   <span class="top">Language: </span> {{repository.language}}
               </div>
-              <div class="card-subtitle mb-2"><span class="top">Created On:</span> &nbsp;{{repository.created_at | date}}</div>
+              <div class="card-subtitle mb-2"><span class="top">Created On:</span> &nbsp;{{repository.created_at | date}}
+                <button class="btn">{{repository.created_at | datePipe}} days ago
+                </button>
+              </div>
             </div>
             </div>
             <div class="card-footer">
