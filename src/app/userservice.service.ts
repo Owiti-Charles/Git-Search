@@ -13,7 +13,7 @@ export class UserserviceService {
   up_key = '2248a8bd35eb376f0b586b764c50c76b67be3a1b';
 
   constructor(private http: HttpClient) {
-    this.foundUser = new User("","","","",0,0,0,"");
+    this.foundUser = new User("","","","",0,0,0,"",new Date);
     this.allRepos = new Repos("","","",new Date,0,0,"");
   }
 
@@ -27,7 +27,8 @@ export class UserserviceService {
       public_repos:number;
       followers:number;
       following:number;
-      avatar_url:string
+      avatar_url:string;
+      created_at:Date;
     }
 
     return new Promise((resolve, reject) => {
