@@ -49,6 +49,7 @@ p{
   float: right;
 }
 .allrepos{
+  font-family: 'Lustria', serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -61,7 +62,7 @@ hr{
   min-height: 95px;
 }
 .top{
-  font-weight: 550;
+  font-weight: bold;
 }
 .btn-group{
   margin-left: 13px;
@@ -71,8 +72,9 @@ hr{
   color: beige;
 }
 .repos h2{
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 2%;
+  font-family: 'Berkshire Swash', cursive;
 }
 #mouse-click{
   margin-top: -2%;
