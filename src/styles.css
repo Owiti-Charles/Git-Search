@@ -2,7 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import '~font-awesome/css/font-awesome.css';
 body{
-  background-image: url("../src/assets/git.jpg");
+  background-image: url("https://raw.githubusercontent.com/Owiti-Charles/New-Portfolio/master/img/bg%20.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

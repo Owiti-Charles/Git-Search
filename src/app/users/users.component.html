@@ -2,35 +2,44 @@
   <div class="overlay">
       <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
       <div class="container content">
-          <div class="row">
-              <div class="col-sm-4" id="imgcard">
-                <div class="userimage card">
-                  <div class="card-img">
-                    <img src="{{user.avatar_url}}" alt="">
-                  </div> 
-                </div>
+        <div class="row">
+          <div class="col-sm-4" id="imgcard">
+            <div class="userimage">
+              <div class="card-img-top">
+                <img src="{{user.avatar_url}}" alt="">
+              </div> 
+            </div>
+            <a href="{{user.html_url}}"><button class="btn-outline-success btn btn-sm">View Profile</button></a>
+          </div>
+          <div class="col-sm-7 user">
+            <div class="card">
+              <div class="card-body">
+                <h4>Git-Search: {{user.login}}</h4>
+                <hr>
+                <p><i class="fa fa-info" style="font-size:18px"></i> Bio: {{user.bio}}</p>
+                <hr>
+                <p><i class="fa fa-file-o" style="font-size:18px"></i>Repositories {{user.public_repos}}</p>
+                <hr>
+                <p> <i class="fa fa-users"></i>followers: {{user.followers}}</p>
+                <hr>
+                <p> <i class="fa fa-user" aria-hidden="true"></i> following: {{user.following}}</p>
+                <hr>
+                <p><i class="fa fa-clock-o" style="font-size:18px"></i> joined: {{user.created_at | date}}</p>
+                <hr>
               </div>
-              <div class="col-sm-7 user">
-                <div class="card">
-                  <div class="card-body">
-                    <h4>Git-Search: {{user.login}}</h4>
-                    <hr>
-                    <p><i class="fa fa-info" style="font-size:18px"></i> Bio: {{user.bio}}</p>
-                    <hr>
-                    <p><i class="fa fa-file-o" style="font-size:18px"></i>Repositories {{user.public_repos}}</p>
-                    <hr>
-                    <p> <i class="fa fa-users"></i>followers: {{user.followers}}</p>
-                    <hr>
-                    <p> <i class="fa fa-user" aria-hidden="true"></i> following: {{user.following}}</p>
-                    <hr>
-                    <p><i class="fa fa-clock-o" style="font-size:18px"></i> joined: {{user.created_at | date}}</p>
-                  </div>
-                  <div class="card-footer">
-                    {{user.html_url}}
-                  </div>
-                </div>  
-              </div>
-            </div> 
+            </div>  
+          </div>
+        </div> 
+      </div>
+      <div class="container allrepos">
+        <div class="card " *ngFor="let repository of repo" style="width: 22rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{repository.name}} </h5>
+            <p class="card-text">{{repository.description}} </p>
+            <h6 class="card-subtitle mb-2 text-muted">Created On:{{repository.created_at | date}}</h6>
+            <a href="{{repository.html_url}}" class="card-link"><button class="btn btn-sm btn-info">View Repository</button></a>
+          </div>
+        </div>
       </div>
   </div>
 </div>
