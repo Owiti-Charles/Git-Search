@@ -14,7 +14,7 @@ export class UserserviceService {
 
   constructor(private http: HttpClient) {
     this.foundUser = new User("","","","",0,0,0,"");
-    this.allRepos = new Repos("","","",new Date);
+    this.allRepos = new Repos("","","",new Date,0,0,"");
   }
 
   searchUSer(searchName: string) {
@@ -50,7 +50,7 @@ export class UserserviceService {
       html_url:string;
       description:string;
       forks:number;
-      watchers:number;
+      watchers_count:number;
       language:string;
       created_at:Date;
     }

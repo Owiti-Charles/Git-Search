@@ -31,8 +31,11 @@
           </div>
         </div> 
       </div>
-
-      <div class="text-center repos">
+      <div id="click" class="text-center">
+          <a href="#reps"><img src="../../assets/mouse_click.png" alt=" mouse_click" id="mouse-click"></a> 
+      </div>
+      
+      <div class="text-center repos" id="reps">
           <h2>Repositories</h2>
         </div>
       <div class="container allrepos">
@@ -41,14 +44,18 @@
             <h5 class="card-title">Repo Name: &nbsp;{{repository.name}} </h5>
             <div class="card-text">
               <hr>
-              <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}} </div>
+              <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}} 
+              </div>
               <hr>
+              <div class="card-subtitle mb-2">
+                  <span class="top">Language: </span> {{repository.language}}
+              </div>
               <div class="card-subtitle mb-2"><span class="top">Created On:</span> &nbsp;{{repository.created_at | date}}</div>
             </div>
             </div>
             <div class="card-footer">
               <div class="btn-group" role="group" aria-label="Third group">
-                <button class="btn btn-sm btn-info"><i class="fa fa-eye" style="font-size:16px"></i> {{repository.watchers}}</button>
+                <button class="btn btn-sm btn-info"><i class="fa fa-eye" style="font-size:16px"></i> {{repository.watchers_count}}</button>
               </div>
               <div class="btn-group" role="group" aria-label="Third group">
                 <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork" style="font-size:16px"></i> {{repository.forks}}</button>
