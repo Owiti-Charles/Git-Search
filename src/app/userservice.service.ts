@@ -49,6 +49,9 @@ export class UserserviceService {
       name:string;
       html_url:string;
       description:string;
+      forks:number;
+      watchers:number;
+      language:string;
       created_at:Date;
     }
     return new Promise((resolve,reject)=>{
