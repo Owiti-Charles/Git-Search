@@ -1,7 +1,8 @@
-import {Injectable} from '@angular/core';
-import {User} from './user';
+import { Injectable } from '@angular/core';
+import { User } from './user';
 import { Repos } from './repos'
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '.././environments/environment';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import {HttpClient} from '@angular/common/http';
 export class UserserviceService {
   foundUser: User;
   allRepos: Repos;
-  up_key = '2248a8bd35eb376f0b586b764c50c76b67be3a1b';
+  up_key =environment.apiKey;
 
   constructor(private http: HttpClient) {
     this.foundUser = new User("","","","",0,0,0,"");
