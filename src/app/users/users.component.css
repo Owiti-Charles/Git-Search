@@ -11,12 +11,15 @@ img{
 .card{
   /* background: teal; */
   background-color: rgba(5, 146, 146, 0.6);
+  box-shadow: 3px 3px 5px black;
+
 }
 .repo{
   background-color:rgba(232, 253, 255, 0.705);
   color: black;
   margin-bottom: 2%;
   border-radius: 4px; 
+  box-shadow: 3px 3px 5px black;
 }
 a{
   text-decoration: none;
@@ -27,6 +30,7 @@ a{
 }
 .user{
   margin-left:1;
+  margin-top: 1%;
 }
 #imgcard{
   margin-top: 1%;
@@ -37,9 +41,12 @@ a{
 p{
   font-size: 18px;
 }
+.name{
+  font-size: 18px;
+}
 .btn{
-  margin-top: 3%;
-  margin-left: 30%;
+  margin-top: -1%;
+  float: right;
 }
 .allrepos{
   display: flex;
@@ -57,7 +64,7 @@ hr{
   font-weight: 550;
 }
 .btn-group{
-  margin-left: 20px;
+  margin-left: 13px;
 }
 #visit a{
   text-decoration: none;
@@ -68,7 +75,7 @@ hr{
   margin-bottom: 2%;
 }
 #mouse-click{
-  margin-top: 1%;
+  margin-top: -2%;
   padding-bottom: 30px; 
   /* animation-iteration-count: infinite; */
 }
@@ -84,10 +91,22 @@ hr{
     transform: translateY(-35px);
   }
   60% {
-    transform: translateY(-35px);
+    transform: translateY(-25px);
   }
 }
 #click img{
   width: 20px;
   height: 60px;
+}
+.follow{
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 1%;
+  float: right;
+  margin-right: 20%;
+}
+#profile{
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+
 }

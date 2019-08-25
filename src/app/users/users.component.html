@@ -8,23 +8,23 @@
               <div class="card-img-top">
                 <img src="{{user.avatar_url}}" alt="">
               </div> 
+              <div class="card-body">
+                  <span  class="name"><i class="fa fa-user" style="font-size:20px"></i> &nbsp;{{user.login}}</span> <a href="{{user.html_url}}"><button class="btn-outline-success btn btn-sm"><i class="fa fa-github" style="font-size:20px"></i> &nbsp; <span id="profile">Github</span> </button></a>
+              </div>
             </div>
-            <a href="{{user.html_url}}"><button class="btn-outline-success btn btn-sm"><i class="fa fa-github" style="font-size:18px"></i> &nbsp; View Profile</button></a>
-          </div>
+            </div>
           <div class="col-sm-7 user">
             <div class="card">
               <div class="card-body">
                 <h4>Git-Search: {{user.login}}</h4>
                 <hr>
-                <p><i class="fa fa-info" style="font-size:18px"></i> Bio: {{user.bio}}</p>
+                <p><i class="fa fa-file-o" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
                 <hr>
-                <p><i class="fa fa-file-o" style="font-size:18px"></i>Repositories {{user.public_repos}}</p>
+                <p> <i class="fa fa-user" style="font-size:18px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span class="follow">{{user.following}}</span></p>
                 <hr>
-                <p> <i class="fa fa-users"></i>followers: {{user.followers}}</p>
+                <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
                 <hr>
-                <p> <i class="fa fa-user" aria-hidden="true"></i> following: {{user.following}}</p>
-                <hr>
-                <p><i class="fa fa-clock-o" style="font-size:18px"></i> joined: {{user.created_at | date}}</p>
+                <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; {{user.created_at | date}}</p>
                 <hr>
               </div>
             </div>  
