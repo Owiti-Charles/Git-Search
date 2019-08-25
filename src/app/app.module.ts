@@ -10,6 +10,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { ReopsitoriesComponent } from './reopsitories/reopsitories.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserserviceService } from './userservice.service';
+import { GitdirectiveDirective } from './directive/gitdirective.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserserviceService } from './userservice.service';
     SearchFormComponent,
     ReopsitoriesComponent,
     NotfoundComponent,
+    GitdirectiveDirective,
     
   ],
   imports: [
