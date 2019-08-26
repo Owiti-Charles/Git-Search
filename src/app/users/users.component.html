@@ -2,7 +2,6 @@
 <div class="container-fluid">
     <ng-progress></ng-progress>
   <div class="overlay">
-      
       <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
       <div class="container content">
         <div class="row">
@@ -27,7 +26,7 @@
                 <hr>
                 <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
                 <hr>
-                <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; {{user.created_at | date}}</p>
+                <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
                 <hr>
               </div>
             </div>  
@@ -53,7 +52,7 @@
               <div class="card-subtitle mb-2">
                   <span class="top">Language: </span> {{repository.language}}
               </div>
-              <div class="card-subtitle mb-2"><span class="top">Created On:</span> &nbsp;{{repository.created_at | date}}
+              <div class="card-subtitle mb-2"><span class="top">Created:&nbsp; <span id="created">{{repository.created_at | datePipe}}</span> &nbsp;  On:</span> &nbsp;{{repository.created_at | date}}
               </div>
             </div>
             </div>

@@ -107,10 +107,18 @@ hr{
   float: right;
   margin-right: 20%;
 }
+.datejoined{
+  float: right;
+  margin-right: 14%;
+}
 #profile{
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
 .forks{
   font-size: 10px;
+}
+#created{
+  font-weight: 400;
+  font-family: 'Pangolin', cursive;
 }

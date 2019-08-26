@@ -36,6 +36,5 @@ repo: Repos;
 
   ngOnInit() {
     this.searchs('Owiti-Charles');
-    // this.myService.getReopos("Owiti-Charles");
   }
 }
